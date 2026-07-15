@@ -3,11 +3,8 @@ HW0 for Harvard's CS2881 AI Safety course
 
 ## Hypothesis
 
-My hypothesis is that the J-space is mandatory for reasoning above a certain level of difficulty; where that is is probably somewhere between MATH 500 and AIME I. W/o the J-space, explicit CoT is a necessary but not sufficient condition for advanced reasoning.
+My hypothesis is that an unablated J-space is mandatory for reasoning above a certain level of difficulty; whatever level of difficulty this is depends on the model (we will test on Qwen3-4b). Anthropic claims that using explicit chain of thought (CoT) reduces dependence on the J-space, shown by experiments where models using explicit CoT retain performance above models without explicit CoT, even under increasing levels of ablation.
 
-Some experiments I have in mind:
-Benchmark and evaluate GSM8 performance on Qwen3-4b with the J-space, Qwen3-4b with the J-space ablated but explicit CoT, and then Qwen3-4b with the J-space ablated and no explicit CoT. I expect decreasing performance, respectively.
+But beyond a certain level of reasoning (harder math problems), can explicit CoT compensate for ablations to the J-space? I don't think so. So for sufficiently advanced reasoning problems, I'd expect that ablations to the J-space will cause similar performance declines on models using explicit CoT and models not using explicit CoT. My guess is that this is somewhere around MATH500 and AIME level problems.
 
-We can do the same with MATH500. I'd expect the performance gap between Qwen3-4b with the J-space ablated but with explicit CoT and Qwen3-4b with the J-space ablated and no explicit CoT to shrink, since the required amount of reasoning for these problems will be more than GSM8. (Here, explicit CoT can only get you so far).
-
-Something similar will happen as we step it up to AIME I and AIME II.
+A positive result here (where ablations to J-space cause uniform performance declines independent of explicit CoT) suggest that without the J-space, explicit CoT is a necessary but not sufficient conidition for advanced reasoning.
