@@ -7,4 +7,6 @@ My hypothesis is that an unablated J-space is mandatory for reasoning above a ce
 
 But beyond a certain level of reasoning (harder math problems), can explicit CoT compensate for ablations to the J-space? I don't think so. So for sufficiently advanced reasoning problems, I'd expect that ablations to the J-space will cause similar performance declines on models using explicit CoT and models not using explicit CoT. My guess is that this is somewhere around MATH500 and AIME level problems.
 
-A positive result here (where ablations to J-space cause uniform performance declines independent of explicit CoT) suggest that without the J-space, explicit CoT is a necessary but not sufficient conidition for advanced reasoning.
+A positive result here (where ablations to J-space cause uniform performance declines independent of explicit CoT) suggest that without the J-space, explicit CoT is a necessary but not sufficient condition for advanced reasoning.
+
+A negative result here suggest that explicit CoT (where there are separable performances with/without explicit CoT, despite ablations to the J-space) suggest that either the model has the ability reason using only explicit CoT on difficult math problems requiring advanced reasoning, or it could also indicate that the ablation was incomplete, that the targeted representation does not play the same functional role in Qwen3-4B as it does in Anthropic’s models, or that the selected problems do not exceed the model’s true J-space-dependence threshold.
